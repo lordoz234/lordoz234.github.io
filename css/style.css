@@ -1,0 +1,139 @@
+/* Здесь будут храниться стили нашего сайта */
+
+body {
+	margin: 0;
+	font-family: 'Roboto';
+	font-size: 18px;
+}
+img {
+	max-width: 100%;
+}
+header {
+	padding-top: 59px;
+	padding-bottom: 22px;
+	background-color: #3a7dfd;
+	color: #ffffff;
+}
+.header-pretitle {
+	margin-top: 102px;
+}
+.header-title {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 36.81px;
+	margin-top: 21px;
+}
+.header-subtitle {
+	font-size: 18px;
+	margin-top: 20px;
+}
+.header-button {
+	box-shadow: 10px 17px 34px 6px rgba(18, 61, 145, 0.83);
+	border-radius: 50px;
+	background-color: #ffffff;
+	color: #072b6f;
+	font-size: 18px;
+	font-weight: 700;
+	padding-top: 17px;
+	padding-left: 55px;
+	padding-right: 55px;
+	padding-bottom: 17px;
+	margin-top: 33px;
+}
+header small {
+	font-size: 12px;
+	display: block;
+	text-align: center;
+	margin-top: 9px;
+}
+.header-button-block {
+	max-width: 210px;
+}
+
+/* Секция портфолио */
+.portfolio {
+	background-color: #dddddd;
+	padding-top: 44px;
+	padding-bottom: 71px;
+}
+.portfolio-block {
+	background-color: #fff;
+	padding-top: 29px;
+	padding-bottom: 44px;
+}
+.portfolio-title{
+	text-transform: uppercase;;
+	font-size: 18px;
+	color: #072b6f;
+	margin-bottom: 10px;
+}
+.portfolio-subtitle {
+	margin-top: 10px;
+	font-size:  14px;
+	color: #7bb9ff;
+	margin-bottom: 30px;
+}
+.portfolio-title, .portfolio-subtitle {
+	text-align: center;
+}
+.portfolio-col1{
+	padding-left: 50px;
+}
+.portfolio-col2{
+	padding-right: 50px;
+}
+.portfolio-block h3 {
+	color: #072b6f;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.portfolio-block text {
+	color: #8f8f8f;
+	font-size: 14px;
+	font-weight: 400;
+}
+.portfolio-block a {
+	color: #072b6f;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+/* Оформление подвала */
+footer {
+	background-color: #3a7dfd;
+	color: #fff;
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+.footer-author {
+	font-size: 24px;
+	margin-bottom: 7px;
+}
+.footer-text {
+	margin-top: 0;
+}
+.social-block {
+	text-align: center;
+}
+.social-block a{
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 13px;
+}
+.footer-cta-block {
+	text-align: center;
+}
+.footer-cta {
+	margin-bottom: 13px;
+}
+.footer-button {
+	display: inline-block;
+	border: 1px solid #ffffff;
+	background-color: transparent;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 50px;
+	padding: 12px 40px;
+}
