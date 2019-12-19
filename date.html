@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+        body {
+             text-align: center;
+            margin: 0;
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #333;
+            width: 100%;
+            height: 100vh;
+            background:
+            url(index-bg.jpg) center 
+                no-repeat;
+                background-size: cover;
+        }
+		.ku {
+		    width: 560px;
+		}
+        .inner {
+        	display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+        }
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+        .login-form h2 {
+            text-align: center;
+            color: #4d4d4d;
+            font-size: 24px;
+            padding: 0px 0 20px 0;
+            color:#fff;
+        }
+        .login-form input[type="password"],
+        .login-form input[type="text"], 
+        .login-form input[type="submit"],
+        {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            margin-bottom: 0px;
+            box-sizing:border-box;
+        }
+        .login-form input[type="date"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            margin-bottom: 15px;
+            box-sizing:border-box;
+            text-align: center;
+        }
+        .login-form input[type="time"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            margin-bottom: 15px;
+            box-sizing:border-box;
+            text-align: center;
+        }
+        .login-form input[type="submit"] {
+            margin-top:5px;
+            width: 94%;
+            padding: 15px;
+            background-color: #535b63;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+        }
+         .login-form button[type="submit"] {
+            margin-top:5px;
+            width: 94%;
+            padding: 15px;
+            background-color: #535b63;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .divtable {
+            width: 800px;
+            height: 750px;
+            overflow-y: scroll;
+        }
+         .table {  overflow: auto;
+            width: 100px;
+            padding: 0px;
+            text-align:center;
+            margin: 0 auto;
+            color: #ffffff;
+            border-collapse: collapse;
+            font-size: 0.4cm;
+            min-width: 400px;
+            border-radius: 5px 5px 0 0;
+            overflow: scroll;
+            box-shadow: 
+                0 0 20px rgba(0, 0, 0, 0, 15);
+        }
+        .vid {
+            width: 70%;
+            height: 5vh;
+            text-align: center;
+        }
+        .table {
+            margin-top:15px;
+        }
+        .table thead tr {
+            background-color: #535b63;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+        }
+        .table th,
+        .table td {
+            padding: 7px 5px;
+        }
+        .table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        .table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+		.selected {
+			background-color: #2e8b57;
+		}
+		.nonselected {
+			background-color:  #4682b4;
+		}
+		.selfselected {
+			background-color:  #808080;
+		}
+         </style>      
+    </head>
+    <body>
+        <div class = "inner">
+    	 <div class = "ku">
+		 <form action="sign" method="POST" class = "login-form" id = "myForm" name = "show" >
+              <p>
+          <h2>Выберите вид услуги : </h2>
+                <select  name = "values" class = "vid" id = "vid" onchange="myFunction()">
+                    <option value="--"> -- </option>
+                    <option value="Стрижка"> Стрижка (1000 рублей, 1 час)</option>
+                    <option value="Мелирование">Мелирование (1500 рублей 1.5 часа)</option>
+                    <option value="Окрашивание">Окрашивание (1500 рублей 1.5 часа)</option>
+                    <option value="Укладка">Укладка (500 рублей 30 минут)</option>
+                    <option value="Массаж головы">Массаж головы (1000 рублей 1 час)</option>
+                    <option value="Лечение волос">Лечение волос (1500 рублей 1 час)</option>
+                    <option value="Ламинирование">Ламинирование (1500 рублей 1.5 часа)</option>
+                    <option value="Наращивание волос">Наращивание волос (1500 рублей 2 часа)</option>
+                    <option value="Плетение кос">Плетение кос (1000 рублей 1 часа)</option>
+                    <option value="Декапирование">Декапирование (1500 рублей 1.5 часа)</option>
+                    <option value="Предпигментация">Предпигментация (1500 рублей 1.5 часа)</option>
+                </select>
+                </p> 
+                <p>
+                    <h2>Выберите дату : </h2>
+                    <input type="date" id="date" name="date"/>
+                </p>
+        </form>
+        <form  class = "login-form">
+            <button type="submit" id="submit1">Показать расписание</button>
+        </form>
+        <form action="sign1" method="POST" class = "login-form" name = "timess"> 
+            <p>
+                <h2> Выберите время : </h2>
+                <input type="time" id="time" name="time"/>
+            </p>  
+            <p>
+                <input type="submit" value = "Записаться" id = "rr"></input>
+            </p>
+        </form>
+        <form action="sign4" method="POST" class = "login-form"> 
+            <p>
+                <input type="submit" value = "Назад"></input>
+            </p>
+        </form>
+    </p>
+  </div>
+  <div class = "divtable">
+        <table id = "rankings-table" class = "table" name = "table">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+  </div>
+  </div>
+    <script type = "text/javascript">
+        const rankingsBody = document.querySelector("#rankings-table > tbody");
+
+        var vid;
+        document.getElementById("submit1").addEventListener("click", function (e) {
+             e.preventDefault();
+            let registerForm = document.forms["show"];
+            let date = registerForm["date"].value;
+            let user = JSON.stringify({date: date, vid: vid});
+            let request = new XMLHttpRequest();
+            request.open("POST", "/sign", true);   
+            request.setRequestHeader("Content-Type", "application/json");
+            request.send(user);
+            loadRankings();
+        });
+
+        function loadRankings () {
+            const request = new XMLHttpRequest();
+            
+            request.open("get", "rankings.json");
+            request.onload = () => {
+                const json = JSON.parse(request.responseText);
+                populateRankings(json);
+            };
+            request.send();
+        }
+
+        function populateRankings (json) {
+           	while (rankingsBody.firstChild) {
+           		rankingsBody.removeChild(rankingsBody.firstChild);
+           	}
+           	time1 = []
+           	time2 = []
+            for (var rows in json) {
+        		var k = json[rows].start_time;
+        		var s = json[rows].end_time;
+        		var string = k.split(":")
+        		var string1 = s.split(":")
+        		let x = Number(string[0])*60 + Number(string[1]);
+        		let y = Number(string1[0])*60 + Number(string1[1]);
+        		time1.push(x)
+        		time2.push(y)
+       		}	
+
+           	var temp = 0;
+           	var ans = []
+           	var y = 0;
+           	var x = 0;
+            console.log(vid);
+           	if (vid == "Стрижка") y = x + 60;
+			if (vid == "Мелирование") y = x + 90;
+			if (vid == "Окрашивание") y = x + 90;
+			if (vid == "Укладка") y = x + 30;
+			if (vid == "Массаж головы") y = x + 60;
+			if (vid == "Лечение волос") y = x + 60;
+			if (vid == "Ламинирование") y = x + 90;
+			if (vid == "Наращивание волос") y = x + 120;
+			if (vid == "Плетение кос") y = x + 60;
+			if (vid == "Декапирование") y = x + 90;
+			if (vid == "Предпигментация") y = x + 90;
+           	for (var i = 480; i < 820; i += 10) {
+           		var str = 0;
+           		var strr = 0;
+           		for (var j = 0; j < time1.length; j++) {
+           			if (time1[j] <= i && i <= time2[j]) {
+           				str = 1;
+           			}
+           		}
+           		if (str == 0) {
+           			for (var j = 0; j < time1.length; j++) {
+           			if (time1[j] - y <= i && i <= time1[j]) {
+           				strr = 1;
+           			}
+           		}
+           		}
+           		if (str == 1) {
+           			ans.push(str)
+           		}
+           		if (str == 0 && strr == 0) {
+           			ans.push(str);
+           		}
+           		if (str == 0 && strr == 1) {
+           			ans.push(2);
+           		}
+           		const tr = document.createElement("tr");
+           		const td = document.createElement("td");
+           		let k = Math.floor(Number(i/60));
+				let kk = Math.floor(Number(k/10));
+				var end_time = '';
+				if (kk == 0) end_time += '0';
+ 				end_time += (k).toString();
+				end_time += ":";
+				let k1 = Number(i % 60);
+				let kk1 = Math.floor(Number(k1/10));
+				if (kk1 == 0) end_time += '0';
+				end_time += (k1).toString();
+    			td.textContent = end_time;
+    			tr.appendChild(td);
+    			rankingsBody.appendChild(tr);
+    			++temp;
+           	}
+
+           	ans[ans.length] = 0;
+           	var childNodes = document.getElementById('rankings-table').rows;
+           	console.log(childNodes.length);
+           	for (var i = 1; i < childNodes.length; i++) {
+           		if (ans[i - 1] == 0) {
+           			childNodes[i].className = "selected";
+           		}
+           		if (ans[i - 1] == 1) {
+           			childNodes[i].className = "nonselected";
+           		}
+           		if (ans[i - 1] == 2) {
+           			childNodes[i].className = "selfselected";
+           		}
+           	}
+        }
+
+        document.getElementById("rr").addEventListener("click", function(e) {
+            e.preventDefault();
+            let request = new XMLHttpRequest();
+            let form = document.forms["timess"];
+            let time = form.elements["time"].value;
+            let user = JSON.stringify({time: time});
+            request.open("POST", "/sign1", true); 
+            request.setRequestHeader("Content-Type", "application/json");
+            request.send(user);
+            request.addEventListener("load", function () {
+                let receivedUser = JSON.parse(request.response);
+                if (receivedUser.text == "GO") {
+                    window.location = "main.html";
+                }
+                else {
+                    alert(receivedUser.text);
+                }
+             });
+        });
+
+
+        function myFunction() {
+          vid = document.getElementById("vid").value;
+        }
+        document.addEventListener("DOMContentLoaded", () => {loadRankings();});
+    </script>
+    </body>
+</html>

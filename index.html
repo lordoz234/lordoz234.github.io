@@ -1,107 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="rus">
 <head>
-	  <!-- Важная техническая информация для браузера -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Важная техническая информация для браузера -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Информация об Авторе и описание проекта -->
-		<meta name="description" content="">
-		<meta name="auyhor" content="">
+        <!-- Информация об Авторе и описание проекта -->
+        <meta name="description" content="">
+        <meta name="auyhor" content="">
 
-		<!-- Иконка, которая будет на вкладке в браузере -->
-		<link rel="icon" href="/favicon.ico">
-		<!-- Заголовок на вкладке в браузере -->
-		<title></title>
-		<!-- Шрифты от Google -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-		<!-- Подключаем наш файл со стилями, который находится в папке css-->
-		<link href="css/style.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <!-- Иконка, которая будет на вкладке в браузере -->
+        <link rel="icon" href="/favicon.ico">
+        <!-- Заголовок на вкладке в браузере -->
+        <!-- Шрифты от Google -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+        <!-- Подключаем наш файл со стилями, который находится в папке css-->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Libre+Baskerville&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
-	
 <body>
-	<header>
-			<div class="container"> 
-			  <div class="row">
-				  <div class="col-7">
-					  <img src="img/main-img.png" alt="Монитор">
-				  </div>
-				  <!-- /.col-7 -->
-				  <div class="col-5">
-					  <p class="header-pretitle">Веб-разработчик</p>
-					  <h1 class="header-title">Влад Девликамов</h1>
-					  <p class="header-subtitle">Верстка на HTML/CSS <br> Разработка сайтов под ключ</p>
-					  <div class="header-button-block">
-						  <button class="header-button">Связаться</button>
-						  <small>*Это бесплатно</small>
-						</div> 
-				  </div>
-				  <!-- /.col-5 -->
-			  </div>
-			  <!-- /.row -->
-		  </div>
-		  <!-- /.container -->
-	</header>
+<header class = "header">
+    <div class="cont">
+        <div class = "header_inner">
+                <img src = "12.png" width="130", height="130">
+                <nav class = "nav">
+                <form action="exit" method="POST" class = "login-form">
+                    <a class = "nav_link" href="date.html">Sign up</a>
+                    <a class = "nav_link" href="login.html">Sign in</a>
+                    <a class = "nav_link"  href="register.html">Register</a>
+                    <button type="submit" class = "exit">Exit</button>
+                </form>
+                </nav>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class = "logo">
+        <img src = "page-logo.svg" width="371", height="155">
+    </div>
+    <div class = "cont">
+        <div class = "intro_inner">
+            <h3 class = "intro_title">Welcome</h3>
+            <a class = "bth" href="servives.html">Learn More</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-author">Borodinski</h4>
+                    <p class="footer-text">Barbershop</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-block">
+                        <p>Подпишитесь:</p>
+                        <a href="https://www.facebook.com/vlad.football"><img src="img/facebook-logo-button.png" alt="Facebook"></a>
+                        <a href="https://tlgrm.ru/"><img src="img/telegram-symbol.png" alt="Telegram"></a>
+                        <a href="https://vk.com/id263195994"><img src="img/vk-social-logotype.png" alt="Вконтанте"></a>
+                        <a href="https://www.youtube.com/watch?v=ifv0yl0VAXw"><img src="img/youtube-symbol.png" alt="Youtube"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-cta-block">
+                        <p class="footer-cta">Напишите мне</p>
+                        <button id = "footer-button" class="footer-button">Написать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script type="text/javascript">
+    document.getElementById("footer-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location = 'https://vk.com/id263195994';
+    });
+</script>
 
-	<section class="portfolio">
-		<div class="container">
-			<div class="portfolio-block">
-				<h2 class="portfolio-title">Портфолио</h2>
-				<p class="portfolio-subtitle">Мои работы</p>
-				<div class="row">
-					<div class="col-6">
-						<div class="portfolio-col1">
-							<img src="img/portfolio-img-1.jpg" alt="Гаспром">
-							<h3>внутренний университет «Газпром нефти»</h3>
-							<p class="portfolio-text">У «Газпром нефти» есть внутренний Корпоративный университет для сотрудников. Это настоящий университет, где сотрудники проходят обучение у внутренних тренеров компании или у специально приглашенных лекторов и экспертов....</p>
-							<a href="#">Смотреть работу</a>
-						</div>
-					</div>
-					<!-- /.col6 -->
-					<div class="col-6">
-						<div class="portfolio-col2">
-							<img src="img/portfolio-img-2.png" alt="">
-							<h3>Сайт платежной системы «Мир»</h3>
-							<p class="portfolio-text">Обновленная версия сайта знакомит посетителей с компаниями, уже принимающими карты к оплате, и приглашает всех остальных присоединиться к проекту...</p>
-							<a href="#">Смотреть работу</a>
-						</div>
-					</div>
-					<!-- /.col6 -->
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<h4 class="footer-author">Влад Девликамов</h4>
-					<p class="footer-text">Разработка сайтов под ключ</p>
-				</div>
-				<!-- /.col4 -->
-				<div class="col-4">
-					<div class="social-block">
-						<p>Подпишитесь:</p>
-						<a href="https://www.facebook.com/vlad.football"><img src="img/facebook-logo-button.png" alt="Facebook"></a>
-						<a href="#"><img src="img/telegram-symbol.png" alt="Telegram"></a>
-						<a href="https://vk.com/id263195994"><img src="img/vk-social-logotype.png" alt="Вконтанте"></a>
-						<a href="#"><img src="img/youtube-symbol.png" alt="Youtube"></a>
-					</div>
-				</div>
-				<!-- /.col4 -->
-				<div class="col-4">
-					<div class="footer-cta-block">
-						<p class="footer-cta">Напишите мне</p>
-						<button class="footer-button">Написать</button>
-					</div>
-				</div>
-				<!-- /.col4 -->
-			</div>
-			<!-- /.row -->
-		</div>
-	</footer>
-	</body>
 </html>

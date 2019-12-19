@@ -11,21 +11,20 @@ img {
 header {
 	padding-top: 59px;
 	padding-bottom: 22px;
-	background-color: #3a7dfd;
 	color: #ffffff;
 }
 .header-pretitle {
-	margin-top: 102px;
+	margin-top: 10px;
 }
 .header-title {
 	font-size: 48px;
 	font-weight: 700;
-	line-height: 36.81px;
-	margin-top: 21px;
+	line-height: 46.81px;
+	margin-top: 10px;
 }
 .header-subtitle {
 	font-size: 18px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .header-button {
 	box-shadow: 10px 17px 34px 6px rgba(18, 61, 145, 0.83);
@@ -38,7 +37,7 @@ header {
 	padding-left: 55px;
 	padding-right: 55px;
 	padding-bottom: 17px;
-	margin-top: 33px;
+	margin-top: 10px;
 }
 header small {
 	font-size: 12px;
@@ -51,6 +50,7 @@ header small {
 }
 
 /* Секция портфолио */
+
 .portfolio {
 	background-color: #dddddd;
 	padding-top: 44px;
@@ -71,16 +71,18 @@ header small {
 	margin-top: 10px;
 	font-size:  14px;
 	color: #7bb9ff;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .portfolio-title, .portfolio-subtitle {
 	text-align: center;
 }
 .portfolio-col1{
 	padding-left: 50px;
+	min-height: 60px;
 }
 .portfolio-col2{
 	padding-right: 50px;
+	min-height: 160px;
 }
 .portfolio-block h3 {
 	color: #072b6f;
@@ -98,13 +100,18 @@ header small {
 	font-size: 14px;
 	font-weight: 400;
 	text-decoration: underline;
+	min-height: 80px;
+}
+.portfolio-block p {
+	color: #8f8f8f;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 /* Оформление подвала */
 footer {
-	background-color: #3a7dfd;
 	color: #fff;
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 110px;
 }
 .footer-author {
@@ -136,4 +143,51 @@ footer {
 	font-size: 18px;
 	border-radius: 50px;
 	padding: 12px 40px;
+}
+
+@media (max-width: 1200px) {
+	.header-pretitle {
+		margin-top: 0px;
+	}
+}
+@media (max-width: 992px){
+	.header-img {
+		display: none;
+	}
+	.header-pretirle {
+		margin-top: 10px;
+	}
+	.footer-author {
+		font-size: 18px;
+	}
+	.footer-text {
+		font-size: 14px;
+	}
+	.social-block a {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.social-block img {
+		width: 30px;
+	}
+	.footer-button {
+		font-size: 14px;
+		padding: 8px 35px;
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio-col1 {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 20px;
+	}
+	.portfolio-col2 {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 20px;
+	}
+	.footer-author, .footer-text{
+		text-align: center;
+	}
 }

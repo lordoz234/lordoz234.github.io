@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login Form Tutorial</title>
+		<style>
+		body {
+   			margin: 0;
+   			margin-top: 0;
+   			font-family: 'Montserrat', sans-serif;
+    		font-size: 12px;
+    		line-height: 1.6;
+    		color: #333;
+    		width: 100%;
+    		height: 100vh;
+    		background:
+        	url(index-bg.jpg) center 
+        		no-repeat;
+    			background-size: cover;
+		}
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+			color:#fff;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"]
+		{
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			margin-top:10px;
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="login-form">
+			<h1>Record</h1>
+			<form action="record" method="POST" name = "record">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="text" name="number" placeholder="Phone Number" required>
+				<input id = "submit" type="submit">
+			</form>
+			<form action="auth3" method="POST">
+				<input type="submit" value="Назад">
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.getElementById("submit").addEventListener("click", function(e) {
+			e.preventDefault();
+			let request = new XMLHttpRequest();
+			let form = document.forms["record"];
+			let username = form.elements["username"].value;
+			let phone = form.elements["number"].value;
+			let user = JSON.stringify({username: username, phone: phone});
+			request.open("POST", "/record", true); 
+			request.setRequestHeader("Content-Type", "application/json");
+			request.send(user);
+			request.addEventListener("load", function () {
+                let receivedUser = JSON.parse(request.response);
+                console.log(receivedUser);
+               	alert(receivedUser.text);
+               	window.location = 'index.html';
+             });
+		});
+	</script>
+</html>

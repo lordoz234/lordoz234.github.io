@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<body>
+    <h1>Populate table with AJAX</h1>
+    <p>
+        The following table will be filled with AJAX.
+    </p>
+    <table id = "rankings-table" class = "table">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Full Name</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dom</td>
+                <td>1,340</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Naomi</td>
+                <td>932</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script type = "text/javascript">
+        const rankingsBody = document.querySelector("#ranking-table > tbody");
+        
+        function loadRankings () {
+            const request = new XMLHttpRequest();
+            
+            request.open("get", "rankings.json");
+            request.onload = () => {
+                const json = JSON.parse(request.responseText);
+                populateRankings(json);
+            };
+            request.send();
+        }
+        
+        function populateRankings (json) {
+            console.log(json);
+        }
+    </script>
+</body>
